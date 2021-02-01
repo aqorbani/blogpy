@@ -3,3 +3,9 @@
 
 #virtual env
 venv/
+
+# data base
+sqlite3
+
+#blog
+weblog/migrations/
