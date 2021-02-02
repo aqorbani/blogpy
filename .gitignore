@@ -9,3 +9,9 @@ sqlite3
 
 #blog
 weblog/migrations/
+
+# Credentials
+.env
+
+# Static files
+files/
