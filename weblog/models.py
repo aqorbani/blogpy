@@ -19,9 +19,6 @@ class UserProfile(models.Model):
                               validators=[validate_file_extention])
     description = models.CharField(max_length=512, null=False, blank=False)
 
-    def __str__(self):
-        return self.user.first_name
-
 
 class Article(models.Model):
     title = models.CharField(max_length=128, null=False, blank=False)
@@ -34,14 +31,8 @@ class Article(models.Model):
     # meta_description = models.CharField(max_length=512, null=False, blank=False)
     # meta_keywords = models.CharField(max_length=512, null=False, blank=False)
 
-    def __str__(self):
-        return self.title
-
 
 class Category(models.Model):
     title = models.CharField(max_length=128, null=False, blank=False)
     cover = models.FileField(upload_to='files/category_cover/', null=False, blank=False,
                              validators=[validate_file_extention])
-
-    def __str__(self):
-        return self.title
