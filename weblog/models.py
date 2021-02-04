@@ -33,7 +33,7 @@ class Article(models.Model):
     author = models.ForeignKey(UserProfile, on_delete=models.CASCADE)
     meta_description = models.CharField(default='', max_length=512, null=False, blank=False)
     meta_keywords = models.CharField(default='', max_length=512, null=False, blank=False)
-
+    promote = models.BooleanField(default=False)
 
 class Category(models.Model):
     title = models.CharField(max_length=128, null=False, blank=False)
